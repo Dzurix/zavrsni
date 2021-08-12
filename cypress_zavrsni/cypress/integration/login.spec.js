@@ -2,8 +2,8 @@
 
 // const Locators = require('../fixtures/Locators');
 
-//const Locators = require('../fixtures/Locators.json')
-
+const Locators = require('../fixtures/Locators.json')
+const Data = require('../fixtures/data.json')
 describe ("Login",() =>{
 
     it ("visit login page", ()=> {
@@ -16,32 +16,32 @@ describe ("Login",() =>{
     // })
     
         cy.visit ('/login')
-        cy.get('#email').type("deki@test.com")
+        cy.url().should("contains", "https://gradebook.vivifyideas" )
+        cy.get(Locators.Login.Email).type("deki@test.com")
        // cy.get(Locators.Login).type("deki@test.com")
-        cy.get('#userPassword').type("deki1234")
-        cy.get('.btn').click()
+        cy.get(Locators.Login.Password).type("deki1234")
+        cy.get(Locators.Login.Submit).click()
 
-        cy.wait(1000) })
+        cy.wait(1000) 
     
-    })
-decribe ("create proffesor", ()=> {
-    it('creating new proffesor', () => { 
+ 
 
-        cy.get(':nth-child(6) > .nav-link').click()
+         cy.get(":nth-child(6) > .nav-link").click()
 
         cy.get('#input-default').type('Dejan')
-        cy.get('#input-default1').type('Stanisin')
+         cy.get('#input-default1').type('Stanisin')
 
-        cy.wait(1000)
+         cy.wait(1000)
 
 
         cy.get('.btn-image').click()
+        cy.get("#__BVID__65").should("be.visible");
         cy.get('#__BVID__65').type('https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg')
 
         cy.get('.btn-secondary').click()
 
-    })
-})
+    }) })
+
     
 
     // email: "deki@test.com"
