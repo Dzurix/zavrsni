@@ -3,7 +3,7 @@
 // const Locators = require('../fixtures/Locators');
 
 const Locators = require('../fixtures/Locators.json')
-const Data = require('../fixtures/data.json')
+const data = require('../fixtures/data.json')
 describe ("Login",() =>{
 
     it ("visit login page", ()=> {
