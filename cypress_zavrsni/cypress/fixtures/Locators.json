@@ -1,0 +1,40 @@
+{
+    "Header": {
+
+    "Login": "cy.get(':nth-child(1) > .nav-link')",
+    "Register": "cy.get(':nth-child(2) > .nav-link')",
+    "Gradebooks": "cy.get(':nth-child(3) > .nav-link')",
+    "AllProfesors": "cy.get(':nth-child(4) > .nav-link')",
+    "AddGradebook": "cy.get(':nth-child(5) > .nav-link')",
+    "AddProfessor": "cy.get(':nth-child(6) > .nav-link')",
+    "MyGradebook": "cy.get(':nth-child(7) > .nav-link')"
+    },
+
+"Login" : {
+    "Email" : "cy.get('#email')",
+    "Password": "cy.get('#userPassword')",
+    "Submit": "cy.get('.btn')']"
+
+
+
+
+}, 
+
+"Logout" : {
+
+    "Logout" : "a[role='button ']"
+},
+
+
+
+"Register" : {
+    "FirstName" : "#first-name",
+    "LastName" : "#last-name",
+    "Email" : "#email",
+    "Password" : "#password",
+    "ConfirmedPassword" : "#password-confirmation",
+    "Checkbox" : "input[type='checkbox']",
+    "Submit" : "button[type='submit']"
+}
+
+}
